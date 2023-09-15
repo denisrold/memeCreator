@@ -1,7 +1,10 @@
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [linea1, setLinea1] = useState("");
+  const [linea2, setLinea2] = useState("");
+
   return (
     <div className="App">
       <select>
@@ -13,14 +16,28 @@ function App() {
         <option value="philosoraptor">Philosoraptor</option>
       </select>
       <br />
-      <input type="text" placeholder="linea 1"></input>
+      <input
+        type="text"
+        placeholder="linea 1"
+        value={linea1}
+        onChange={(e) => {
+          setLinea1(e.target.value);
+        }}
+      ></input>
       <br />
-      <input type="text" placeholder="linea 1"></input>
+      <input
+        type="text"
+        placeholder="linea 1"
+        value={linea2}
+        onChange={(e) => {
+          setLinea2(e.target.value);
+        }}
+      ></input>
       <br />
       <button>Exportar</button>
       <div>
-        <span>linea 1</span>
-        <span>linea 2</span>
+        <span>{linea1}</span>
+        <span>{linea2}</span>
         <img src="" alt=""></img>
       </div>
     </div>
