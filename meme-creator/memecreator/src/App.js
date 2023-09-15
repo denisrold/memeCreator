@@ -4,7 +4,6 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      // select pickr
       <select>
         <option value="futurama">Futurama</option>
         <option value="fire">Casa en llamas</option>
@@ -13,8 +12,11 @@ function App() {
         <option value="smart">Smart Guy</option>
         <option value="philosoraptor">Philosoraptor</option>
       </select>
+      <br />
       <input type="text"></input>
+      <br />
       <input type="text"></input>
+      <br />
       <button>Exportar</button>
     </div>
   );
