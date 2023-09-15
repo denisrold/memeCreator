@@ -13,11 +13,16 @@ function App() {
         <option value="philosoraptor">Philosoraptor</option>
       </select>
       <br />
-      <input type="text"></input>
+      <input type="text" placeholder="linea 1"></input>
       <br />
-      <input type="text"></input>
+      <input type="text" placeholder="linea 1"></input>
       <br />
       <button>Exportar</button>
+      <div>
+        <span>linea 1</span>
+        <span>linea 2</span>
+        <img src="" alt=""></img>
+      </div>
     </div>
   );
 }
