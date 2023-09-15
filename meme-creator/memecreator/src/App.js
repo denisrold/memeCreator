@@ -28,25 +28,30 @@ function App() {
         <option value="philosoraptor">Philosoraptor</option>
       </select>
       <br />
-      <input
-        type="text"
-        placeholder="linea 1"
-        value={linea1}
-        onChange={(e) => {
-          setLinea1(e.target.value);
-        }}
-      ></input>
+      {imagen && (
+        <div>
+          <input
+            type="text"
+            placeholder="linea 1"
+            value={linea1}
+            onChange={(e) => {
+              setLinea1(e.target.value);
+            }}
+          ></input>
+          <br />
+          <input
+            type="text"
+            placeholder="linea 2"
+            value={linea2}
+            onChange={(e) => {
+              setLinea2(e.target.value);
+            }}
+          ></input>
+        </div>
+      )}
+
       <br />
-      <input
-        type="text"
-        placeholder="linea 2"
-        value={linea2}
-        onChange={(e) => {
-          setLinea2(e.target.value);
-        }}
-      ></input>
-      <br />
-      <button onClick={onClickExport}>Exportar</button>
+      <button onClick={onClickExport}>Descargar</button>
       <div className="meme" id="meme">
         <span>{linea2}</span>
         <br />

@@ -39,7 +39,8 @@
 }
 
 .meme{position: relative;
-max-height: 500px;}
+max-height: 500px;
+background:black;}
 .meme span{
   position: absolute;
   top:50px;
@@ -59,6 +60,6 @@ max-height: 500px;}
   width: 100%;
   max-width: 500px;
 }
-body .meme {
+.meme {
 background-color: transparent;
 }
