@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <select onChange={onChangeIAmgen}>
+        <option>Seleccionar meme</option>
         <option value="futurama">Futurama</option>
         <option value="fire">Casa en llamas</option>
         <option value="history">History channel</option>
@@ -38,14 +39,11 @@ function App() {
       ></input>
       <br />
       <button>Exportar</button>
-      <div>
+      <div className="meme">
         <span>{linea1}</span>
         <br />
-        <span>
-          {linea2}
-          {imagen}
-        </span>
-        <img src={imagen} alt=""></img>
+        <span>{linea2}</span>
+        <img src={"/img/" + imagen + ".jpg"} alt=""></img>
       </div>
     </div>
   );
