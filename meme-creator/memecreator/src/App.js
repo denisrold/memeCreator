@@ -9,7 +9,11 @@ function App() {
 
   const onClickExport = (e) => {
     html2canvas(document.querySelector("#meme")).then((canvas) => {
-      document.body.appendChild(canvas);
+      let img = canvas.toDataURL("image/png");
+      var link = document.createElement("a");
+      link.href = img;
+      link.download = "meme.jpg";
+      link.click();
     });
   };
   return (
@@ -35,7 +39,7 @@ function App() {
       <br />
       <input
         type="text"
-        placeholder="linea 1"
+        placeholder="linea 2"
         value={linea2}
         onChange={(e) => {
           setLinea2(e.target.value);
@@ -44,10 +48,10 @@ function App() {
       <br />
       <button onClick={onClickExport}>Exportar</button>
       <div className="meme" id="meme">
-        <span>{linea1}</span>
-        <br />
         <span>{linea2}</span>
+        <br />
         <img src={"/img/" + imagen + ".jpg"} alt=""></img>
+        <span>{linea1}</span>
       </div>
     </div>
   );

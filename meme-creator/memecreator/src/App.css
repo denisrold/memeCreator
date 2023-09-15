@@ -38,10 +38,11 @@
   }
 }
 
-  
+.meme{position: relative;
+max-height: 500px;}
 .meme span{
   position: absolute;
-  margin-top: 60px;
+  top:50px;
   font-size: 36px;
   font-weight: 700;
   text-shadow: 1px 0px 2px black, -1px 0px 2px black, 0px 1px 2px black, 0px -1px 2px black;
@@ -50,10 +51,14 @@
   left: 0;
 }
 .meme span:nth-child(1){
-  margin-top: 320px;
+  position: absolute;
+  top: 85%;
 }
 
 .meme img{
   width: 100%;
   max-width: 500px;
+}
+body .meme {
+background-color: transparent;
 }
