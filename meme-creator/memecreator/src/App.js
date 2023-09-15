@@ -4,10 +4,13 @@ import "./App.css";
 function App() {
   const [linea1, setLinea1] = useState("");
   const [linea2, setLinea2] = useState("");
-
+  const [imagen, setImagen] = useState("");
+  const onChangeIAmgen = function (event) {
+    setImagen(event.target.value);
+  };
   return (
     <div className="App">
-      <select>
+      <select onChange={onChangeIAmgen}>
         <option value="futurama">Futurama</option>
         <option value="fire">Casa en llamas</option>
         <option value="history">History channel</option>
@@ -37,8 +40,12 @@ function App() {
       <button>Exportar</button>
       <div>
         <span>{linea1}</span>
-        <span>{linea2}</span>
-        <img src="" alt=""></img>
+        <br />
+        <span>
+          {linea2}
+          {imagen}
+        </span>
+        <img src={imagen} alt=""></img>
       </div>
     </div>
   );
