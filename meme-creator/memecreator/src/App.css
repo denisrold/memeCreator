@@ -1,13 +1,29 @@
 .App {
   text-align: center;
-
+  
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+select, input, button{
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.3rem;
+  outline: none;
+  font-weight: bolder;
+  margin-top: 0.7rem;
+}
+select option{
+  font-weight: bolder;
+  font-size: smaller;
+}
+button{width: 13rem;}
+button:hover{  cursor: pointer;}
+button:active{
+  background-color: whitesmoke;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -47,7 +63,7 @@ margin: auto;}
 .meme span{
   position: absolute;
   top:50px;
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 700;
   text-shadow: 1px 0px 2px black, -1px 0px 2px black, 0px 1px 2px black, 0px -1px 2px black;
   color: white;
