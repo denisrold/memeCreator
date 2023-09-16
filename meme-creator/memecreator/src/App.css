@@ -38,9 +38,12 @@
   }
 }
 
-.meme{position: relative;
-max-height: 500px;
-background:black;}
+.meme{
+position: relative;
+padding-bottom: 1rem;
+max-width: 500px;
+margin: auto;}
+
 .meme span{
   position: absolute;
   top:50px;
@@ -53,13 +56,15 @@ background:black;}
 }
 .meme span:nth-child(1){
   position: absolute;
-  top: 85%;
+  top: 80%;
 }
 
 .meme img{
   width: 100%;
   max-width: 500px;
+  height: 100%;
+  max-height: 500px;
 }
-.meme {
-background-color: transparent;
+body ,.meme {
+background-color: black;
 }

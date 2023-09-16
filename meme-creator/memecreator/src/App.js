@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <select onChange={(e) => setImagen(e.target.value)}>
-        <option>Seleccionar meme</option>
+        <option value="">Seleccionar meme</option>
         <option value="futurama">Futurama</option>
         <option value="fire">Casa en llamas</option>
         <option value="history">History channel</option>
@@ -55,7 +55,7 @@ function App() {
       <div className="meme" id="meme">
         <span>{linea2}</span>
         <br />
-        <img src={"/img/" + imagen + ".jpg"} alt=""></img>
+        <img src={"/img/" + imagen + ".jpg"} alt=" "></img>
         <span>{linea1}</span>
       </div>
     </div>
