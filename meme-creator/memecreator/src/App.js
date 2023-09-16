@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <select onChange={(e) => setImagen(e.target.value)}>
-        <option value="">Seleccionar meme</option>
+        <option value="imagen">Seleccionar meme</option>
         <option value="futurama">Futurama</option>
         <option value="fire">Casa en llamas</option>
         <option value="history">History channel</option>
@@ -47,17 +47,16 @@ function App() {
               setLinea2(e.target.value);
             }}
           ></input>
+          <br />
+          <button onClick={onClickExport}>Descargar</button>
+          <div className="meme" id="meme">
+            <span>{linea2}</span>
+            <br />
+            <img src={"/img/" + imagen + ".jpg"} alt=" "></img>
+            <span>{linea1}</span>
+          </div>
         </div>
       )}
-
-      <br />
-      <button onClick={onClickExport}>Descargar</button>
-      <div className="meme" id="meme">
-        <span>{linea2}</span>
-        <br />
-        <img src={"/img/" + imagen + ".jpg"} alt=" "></img>
-        <span>{linea1}</span>
-      </div>
     </div>
   );
 }
